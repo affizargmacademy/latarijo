@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- awal section SEO + META -->
+  <title>Blog — LATAR IJO</title>
+  <meta name="description" content="Blog LATAR IJO berisi inspirasi destinasi, itinerary, rekomendasi kuliner, dan tips perjalanan agar liburan terasa rapi, nyaman, dan berkesan." />
+  <meta name="keywords" content="blog latar ijo, wisata, travel tips, itinerary, destinasi, kuliner, fnb, rekomendasi, liburan" />
+  <meta name="author" content="LATAR IJO" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/blog.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blog — LATAR IJO" />
+  <meta property="og:description" content="Inspirasi destinasi, itinerary, rekomendasi kuliner, dan tips perjalanan dari LATAR IJO." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/blog.html" />
+  <meta property="og:image" content="https://example.com/og-cover.jpg" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog — LATAR IJO" />
+  <meta name="twitter:description" content="Inspirasi destinasi, itinerary, rekomendasi kuliner, dan tips perjalanan." />
+  <meta name="twitter:image" content="https://example.com/og-cover.jpg" />
+
+  <!-- Favicon (tanpa file, anti-error) -->
+  <link rel="icon"
+        href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="14" fill="%231E2321"/%3E%3Cpath d="M22 46V18h6v22h14v6H22z" fill="%23DFE7CE"/%3E%3Ccircle cx="46" cy="22" r="4" fill="%237B9A32"/%3E%3C/svg%3E' />
+  <meta name="theme-color" content="#1E2321" />
+  <!-- akhir section SEO + META -->
+
+  <!-- awal section JSON-LD (AI Overview / Structured Data) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog — LATAR IJO",
+    "url": "https://example.com/blog.html",
+    "inLanguage": "id-ID",
+    "description": "Artikel inspirasi destinasi, itinerary, rekomendasi kuliner, dan tips perjalanan dari LATAR IJO.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "LATAR IJO",
+      "url": "https://example.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LATAR IJO",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://example.com/logo.png"
+      }
+    }
+  }
+  </script>
+  <!-- akhir section JSON-LD (AI Overview / Structured Data) -->
+
+  <!-- awal section BOOTSTRAP + ICONS + FONTS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- akhir section BOOTSTRAP + ICONS + FONTS -->
+
+  <!-- awal section CSS (FINAL) -->
+  <style>
+    /* --- VARIABLES --- */
+    :root {
+      --color-primary: #7B9A32;
+      --color-accent: #DFE7CE;
+      --color-dark: #1E2321;
+      --color-white: #FFFFFF;
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Manrope', sans-serif;
+    }
+
+    /* --- GLOBAL RESET & ANTI GLITCH --- */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      font-family: var(--font-sans);
+      color: var(--color-dark);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .serif-font { font-family: var(--font-serif); }
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    /* --- BUTTON STYLES --- */
+    .btn-lunar {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50px;
+      padding: 12px 30px;
+      font-weight: 500;
+      border: 1px solid var(--color-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+    .btn-lunar:hover { background-color: transparent; color: var(--color-primary); }
+    .btn-lunar-white {
+      background-color: var(--color-white);
+      color: var(--color-dark);
+      border-radius: 50px;
+      padding: 10px 25px;
+      font-weight: 600;
+    }
+
+    /* --- NAVIGATION --- */
+    .navbar {
+      padding: 20px 0;
+      transition: 0.4s;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+    }
+    .navbar-brand {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: white !important;
+      letter-spacing: 1px;
+    }
+    .nav-link {
+      color: rgba(255,255,255,0.8) !important;
+      font-size: 0.9rem;
+      margin: 0 10px;
+    }
+    .nav-link:hover { color: white !important; }
+
+    /* --- PAGE HERO (BLOG) --- */
+    .page-hero{
+      position: relative;
+      min-height: 58vh;
+      padding-top: 92px;
+      padding-bottom: 70px;
+      display:flex;
+      align-items:flex-end;
+      overflow:hidden;
+      background:#111;
+    }
+    .page-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=2200&q=55")
+        center/cover no-repeat;
+      filter:saturate(.95);
+      transform: scale(1.01);
+      z-index:0;
+    }
+    .page-hero .hero-overlay{
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(30,35,33,.22) 0%, rgba(30,35,33,.10) 45%, rgba(30,35,33,.80) 100%);
+      z-index:1;
+    }
+    .page-hero .hero-content{ position:relative; z-index:2; }
+    .page-title{
+      color: rgba(255,255,255,.92);
+      font-size: clamp(42px, 5vw, 82px);
+      line-height: .95;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      margin: 0 0 10px 0;
+    }
+    .page-sub{
+      color: rgba(255,255,255,.72);
+      max-width: 72ch;
+      font-size: 13px;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* --- SECTIONS --- */
+    .section-padding { padding: 100px 0; }
+
+    /* --- Search bar (light, no-glitch) --- */
+    .search-wrap{
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(30,35,33,0.10);
+      border-radius: 999px;
+      padding: 10px 12px;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.05);
+    }
+    .search-wrap i{ color: rgba(30,35,33,0.55); font-size: 18px; }
+    .search-wrap input{
+      border: 0;
+      outline: none;
+      width: 100%;
+      font-size: .95rem;
+      background: transparent;
+    }
+    .search-wrap button{
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-weight: 600;
+      background: var(--color-primary);
+      color: white;
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+    }
+    .search-wrap button:hover{ opacity: .95; }
+
+    /* --- Blog cards --- */
+    .post-card{
+      border-radius: 18px;
+      overflow:hidden;
+      background: #fff;
+      border: 1px solid rgba(30,35,33,0.08);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.04);
+      height: 100%;
+      display:flex;
+      flex-direction: column;
+    }
+    .post-thumb{
+      background:#f2f2f2;
+      overflow:hidden;
+    }
+    .post-thumb img{
+      width:100%;
+      height: 240px;
+      object-fit:cover;
+      display:block;
+      transition: transform .6s ease;
+    }
+    .post-card:hover .post-thumb img{ transform: scale(1.05); }
+
+    .post-body{
+      padding: 18px 18px 20px 18px;
+      display:flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .meta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+      color: rgba(30,35,33,0.55);
+      font-size: .9rem;
+      margin-bottom: 10px;
+    }
+    .pill-tag{
+      font-size: .82rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(123,154,50,0.12);
+      color: var(--color-primary);
+      border: 1px solid rgba(123,154,50,0.18);
+    }
+    .post-title{
+      margin: 0 0 10px 0;
+      font-size: 1.35rem;
+      line-height: 1.2;
+    }
+    .post-desc{
+      margin: 0 0 14px 0;
+      color: rgba(30,35,33,0.70);
+      line-height: 1.75;
+      font-size: .95rem;
+    }
+    .post-footer{
+      margin-top: auto;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      padding-top: 8px;
+    }
+    .readmore{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      font-weight: 600;
+      color: rgba(30,35,33,0.72);
+    }
+    .readmore:hover{ color: var(--color-primary); }
+    .time{
+      font-size: .9rem;
+      color: rgba(30,35,33,0.55);
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      background-color: var(--color-dark);
+      color: white;
+      padding: 80px 0 0 0;
+      overflow: hidden;
+    }
+
+    /* Responsive Fixes */
+    @media (max-width: 768px) {
+      .page-title { font-size: 2.5rem; }
+      .btn-lunar { padding: 10px 20px; font-size: 0.9rem; }
+      .search-wrap{ border-radius: 18px; }
+    }
+  </style>
+  <!-- akhir section CSS (FINAL) -->
+</head>
+
+<body>
+
+  <!-- awal section NAVBAR (HTML) -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">LATAR IJO</a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+              aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang</a></li>
+          <li class="nav-item"><a class="nav-link" href="kuliner.html">Kuliner</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <a class="btn-lunar-white" href="#contact">Reservasi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- akhir section NAVBAR (HTML) -->
+
+  <main id="home">
+
+    <!-- awal section HERO (BLOG) -->
+    <section class="page-hero" aria-label="Hero Blog LATAR IJO">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="row g-4 align-items-end">
+          <div class="col-lg-8">
+            <h1 class="page-title serif-font">BLOG<br>LATAR IJO.</h1>
+            <p class="page-sub">
+              Inspirasi destinasi, itinerary yang rapi, rekomendasi kuliner, dan tips perjalanan agar liburan terasa nyaman.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <div class="search-wrap mt-2 mt-lg-0" role="search" aria-label="Cari artikel">
+              <i class="bi bi-search"></i>
+              <input id="searchInput" type="search" placeholder="Cari: destinasi, itinerary, kuliner..." aria-label="Ketik kata kunci">
+              <button id="searchBtn" type="button"><span>Cari</span> <i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir section HERO (BLOG) -->
+
+    <!-- awal section LIST POST -->
+    <section class="section-padding bg-white" id="posts">
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-8">
+            <h2 class="serif-font display-4 mb-2">ARTIKEL PILIHAN.</h2>
+            <p class="text-muted mb-0" style="max-width: 72ch;">
+              Semua artikel di bawah ini masih 1 halaman (dummy). Jika mau jadi halaman detail per artikel, bilang ya.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <a href="#contact" class="btn-lunar">Konsultasi Trip <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="row g-4" id="postGrid">
+
+          <!-- Post 1 -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="itinerary 2 hari 1 malam" data-tags="itinerary destinasi">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1400&q=70"
+                     alt="Itinerary perjalanan" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">ITINERARY</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 2–3 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Itinerary 2H1M yang Rapi, Tanpa Buru-buru</h3>
+                <p class="post-desc">
+                  Susunan rute, waktu kunjungan, dan jeda makan yang pas — cocok untuk liburan singkat.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="itenerari-2h1m-yang-rapi.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 2 -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="rekomendasi kuliner lokal" data-tags="kuliner fnb">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=70"
+                     alt="Kuliner lokal" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">KULINER</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 3–4 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Rasa Lokal yang Wajib Dicoba Saat Trip</h3>
+                <p class="post-desc">
+                  Dari menu khas sampai spot nyaman untuk keluarga — rekomendasi yang aman dan enak.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="rasa-lokal-yang-wajib-dicoba-saat-trip.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 3 -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="tips packing" data-tags="tips travel">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1400&q=70"
+                     alt="Tips packing" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">TIPS</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 2–3 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Packing Checklist: Ringkas, Tapi Lengkap</h3>
+                <p class="post-desc">
+                  Daftar barang esensial untuk trip pendek maupun panjang — agar nyaman dari berangkat sampai pulang.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="packing-cheklist-rapi-tapi-lengkap.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 4 -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="destinasi alam" data-tags="destinasi wisata">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=70"
+                     alt="Destinasi alam" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">DESTINASI</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 3–4 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Destinasi Alam yang Tenang untuk Recharge</h3>
+                <p class="post-desc">
+                  Rekomendasi spot yang tidak terlalu ramai, view cantik, dan cocok untuk healing yang benar-benar tenang.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="destinasi-alam-yang-tenang-untuk-recharge.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 5 -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="budget trip" data-tags="tips itinerary">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=70"
+                     alt="Budget trip" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">BUDGET</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 3–4 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Budget Trip: Hemat Tanpa Mengorbankan Nyaman</h3>
+                <p class="post-desc">
+                  Cara menyusun itinerary yang efisien: rute, jam kunjung, dan pilihan makan yang tetap memuaskan.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="trip-hemat-tanpa-mengorbankan-kenyamanan.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 6 -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="spot cafe" data-tags="kuliner cafe">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=1400&q=70"
+                     alt="Spot cafe" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">CAFE</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 2–3 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Spot Cafe Nyaman untuk Jeda Itinerary</h3>
+                <p class="post-desc">
+                  Tempat minum kopi, recharge, dan rapat kecil — cocok untuk keluarga maupun rombongan.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="wisata-kuliner-lokal.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- simple note -->
+        <div class="text-center mt-5">
+          <small class="text-muted">Tip: pakai kolom pencarian di atas untuk filter artikel (tanpa reload).</small>
+        </div>
+      </div>
+    </section>
+    <!-- akhir section LIST POST -->
+
+    <!-- awal section CONTACT -->
+    <section class="section-padding text-center bg-white" id="contact">
+      <div class="container">
+        <h2 class="serif-font display-4 mb-4">SIAP SUSUN TRIP<br>YANG RAPI?</h2>
+        <p class="text-muted mx-auto mb-5" style="max-width: 560px;">
+          Ceritakan kebutuhanmu: destinasi, tanggal, jumlah orang, dan preferensi kuliner.
+          Tim LATAR IJO akan bantu rekomendasikan rute dan pengalaman terbaik.
+        </p>
+        <a href="#" class="btn-lunar">Hubungi Sekarang <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </section>
+    <!-- akhir section CONTACT -->
+
+    <!-- awal section FOOTER -->
+    <footer>
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <h3 class="serif-font mb-2">LATAR IJO</h3>
+            <p class="text-white-50 mb-0" style="max-width: 520px;">
+              Wisata &amp; F&amp;B experience — rute terbaik, layanan rapi, rasa autentik.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-6">
+                <h5 class="text-white-50 text-uppercase" style="letter-spacing:1px; font-size:.8rem;">Menu</h5>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2"><a href="index.html" class="text-white-50">Beranda</a></li>
+                  <li class="mb-2"><a href="tentang-kami.html" class="text-white-50">Tentang</a></li>
+                  <li class="mb-2"><a href="kuliner.html" class="text-white-50">Kuliner</a></li>
+                  <li class="mb-2"><a href="blog.html" class="text-white-50">Blog</a></li>
+                  <li class="mb-2"><a href="#contact" class="text-white-50">Kontak</a></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <h5 class="text-white-50 text-uppercase" style="letter-spacing:1px; font-size:.8rem;">Kontak</h5>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2 text-white-50">halo@latarijo.com</li>
+                  <li class="mb-2 text-white-50">+62 812-0000-0000</li>
+                  <li class="mb-2 text-white-50">Indonesia</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center pt-4 mt-4 border-top border-white border-opacity-10">
+          <small class="text-white-50">© <span id="year"></span> LATAR IJO. All rights reserved.</small>
+          <small class="text-white-50">Tourism &amp; F&amp;B</small>
+        </div>
+      </div>
+    </footer>
+    <!-- akhir section FOOTER -->
+
+  </main>
+
+  <!-- awal section BOOTSTRAP JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- akhir section BOOTSTRAP JS CDN -->
+
+  <!-- awal section JS (MAIN) -->
+  <script>
+    (() => {
+      // Tahun otomatis
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+
+      // Tutup navbar collapse setelah klik menu (mobile)
+      const nav = document.getElementById("navMain");
+      if (nav) {
+        nav.addEventListener("click", (e) => {
+          const a = e.target.closest("a");
+          if (!a) return;
+          const bsCollapse = bootstrap.Collapse.getInstance(nav) || new bootstrap.Collapse(nav, { toggle: false });
+          if (window.innerWidth < 992) bsCollapse.hide();
+        });
+      }
+
+      // Filter artikel (client-side, no reload)
+      const input = document.getElementById('searchInput');
+      const btn = document.getElementById('searchBtn');
+      const items = Array.from(document.querySelectorAll('.post-item'));
+
+      function runFilter(){
+        const q = (input.value || '').trim().toLowerCase();
+        items.forEach(el => {
+          const title = (el.getAttribute('data-title') || '').toLowerCase();
+          const tags  = (el.getAttribute('data-tags') || '').toLowerCase();
+          const match = !q || title.includes(q) || tags.includes(q);
+          el.style.display = match ? '' : 'none';
+        });
+      }
+
+      if (input) input.addEventListener('input', runFilter);
+      if (btn) btn.addEventListener('click', runFilter);
+    })();
+  </script>
+  <!-- akhir section JS (MAIN) -->
+</body>
+</html>
