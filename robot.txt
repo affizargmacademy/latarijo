@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Mengamankan folder backend atau sistem (jika ada)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+
+# Pastikan folder gambar terbuka untuk Google Images
+# Allow: /images/
+# Allow: /assets/
+# Allow: /img/
+
+# Lokasi Peta Situs
+Sitemap: https://latarijo.vercel.app/sitemap.xml
