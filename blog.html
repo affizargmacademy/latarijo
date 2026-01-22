@@ -288,21 +288,6 @@
       font-size: .9rem;
       color: rgba(30,35,33,0.55);
     }
-
-    /* --- FOOTER --- */
-    footer {
-      background-color: var(--color-dark);
-      color: white;
-      padding: 80px 0 0 0;
-      overflow: hidden;
-    }
-
-    /* Responsive Fixes */
-    @media (max-width: 768px) {
-      .page-title { font-size: 2.5rem; }
-      .btn-lunar { padding: 10px 20px; font-size: 0.9rem; }
-      .search-wrap{ border-radius: 18px; }
-    }
   </style>
   <!-- akhir section CSS (FINAL) -->
 </head>
@@ -367,9 +352,6 @@
         <div class="row align-items-end mb-5">
           <div class="col-lg-8">
             <h2 class="serif-font display-4 mb-2">ARTIKEL PILIHAN.</h2>
-            <p class="text-muted mb-0" style="max-width: 72ch;">
-              Semua artikel di bawah ini masih 1 halaman (dummy). Jika mau jadi halaman detail per artikel, bilang ya.
-            </p>
           </div>
           <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
             <a href="#contact" class="btn-lunar">Konsultasi Trip <i class="bi bi-arrow-right"></i></a>
@@ -534,11 +516,99 @@
             </div>
           </div>
 
+          <!-- Post 7 (DITAMBAHKAN) -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="transportasi lokal" data-tags="tips travel budget">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1465447142348-e9952c393450?auto=format&fit=crop&w=1400&q=70"
+                     alt="Transportasi lokal" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">TIPS</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 2–3 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Transportasi Lokal: Hemat Waktu, Hemat Tenaga</h3>
+                <p class="post-desc">
+                  Panduan memilih rute, jam berangkat, dan opsi transportasi yang paling masuk akal untuk itinerary rapi.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="transportasi-lokal-hemat-waktu-hemat-tenaga.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 8 (DITAMBAHKAN) -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="kuliner malam" data-tags="kuliner fnb itinerary">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?auto=format&fit=crop&w=1400&q=70"
+                     alt="Kuliner malam" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">KULINER</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 3–4 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Kuliner Malam: Pilih yang Aman, Tetap Autentik</h3>
+                <p class="post-desc">
+                  Checklist singkat: kebersihan, jam ramai, dan menu yang “pasti aman” untuk rombongan maupun keluarga.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="kuliner-malam-pilih-yang-aman-tetap-autentik.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post 9 (DITAMBAHKAN) -->
+          <div class="col-md-6 col-lg-4 post-item" data-title="itinerary keluarga" data-tags="itinerary tips keluarga">
+            <div class="post-card">
+              <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1400&q=70"
+                     alt="Itinerary keluarga" loading="lazy" decoding="async">
+              </div>
+              <div class="post-body">
+                <div class="meta-row">
+                  <span class="pill-tag">ITINERARY</span>
+                  <span><i class="bi bi-calendar3 me-1"></i> 3–4 Menit</span>
+                </div>
+                <h3 class="serif-font post-title">Itinerary Keluarga: Ada Jeda, Anak Tetap Happy</h3>
+                <p class="post-desc">
+                  Susunan rute yang ramah anak: waktu makan teratur, spot istirahat, dan durasi kunjungan yang realistis.
+                </p>
+                <div class="post-footer">
+                  <a class="readmore" href="itinerary-keluarga-ada-jeda-anak-tetap-happy.html" aria-label="Baca selengkapnya">
+                    Baca <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <span class="time">Update: Minggu ini</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Prev / Next (DITAMBAHKAN) -->
+        <div class="d-flex justify-content-between align-items-center mt-5" id="pager">
+          <button class="btn-lunar" type="button" id="prevBtn">
+            <i class="bi bi-arrow-left"></i> Prev
+          </button>
+          <small class="text-muted" id="pageInfo">Halaman 1</small>
+          <button class="btn-lunar" type="button" id="nextBtn">
+            Next <i class="bi bi-arrow-right"></i>
+          </button>
         </div>
 
         <!-- simple note -->
         <div class="text-center mt-5">
-          <small class="text-muted">Tip: pakai kolom pencarian di atas untuk filter artikel (tanpa reload).</small>
         </div>
       </div>
     </section>
@@ -557,47 +627,114 @@
     </section>
     <!-- akhir section CONTACT -->
 
-    <!-- awal section FOOTER -->
-    <footer>
-      <div class="container py-5">
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <h3 class="serif-font mb-2">LATAR IJO</h3>
-            <p class="text-white-50 mb-0" style="max-width: 520px;">
-              Wisata &amp; F&amp;B experience — rute terbaik, layanan rapi, rasa autentik.
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-6">
-                <h5 class="text-white-50 text-uppercase" style="letter-spacing:1px; font-size:.8rem;">Menu</h5>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2"><a href="index.html" class="text-white-50">Beranda</a></li>
-                  <li class="mb-2"><a href="tentang-kami.html" class="text-white-50">Tentang</a></li>
-                  <li class="mb-2"><a href="kuliner.html" class="text-white-50">Kuliner</a></li>
-                  <li class="mb-2"><a href="blog.html" class="text-white-50">Blog</a></li>
-                  <li class="mb-2"><a href="#contact" class="text-white-50">Kontak</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <h5 class="text-white-50 text-uppercase" style="letter-spacing:1px; font-size:.8rem;">Kontak</h5>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2 text-white-50">halo@latarijo.com</li>
-                  <li class="mb-2 text-white-50">+62 812-0000-0000</li>
-                  <li class="mb-2 text-white-50">Indonesia</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- awal section FOOTER -->
+        <footer class="footer">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <!-- Kolom 1: Brand -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h3 class="serif-font mb-2">LATAR IJO</h3>
+                        <p class="text-white-50 mb-0">
+                            Wisata &amp; F&amp;B experience — rute terbaik, layanan rapi, rasa autentik.
+                        </p>
+                    </div>
 
-        <div class="d-flex justify-content-between align-items-center pt-4 mt-4 border-top border-white border-opacity-10">
-          <small class="text-white-50">© <span id="year"></span> LATAR IJO. All rights reserved.</small>
-          <small class="text-white-50">Tourism &amp; F&amp;B</small>
-        </div>
-      </div>
-    </footer>
-    <!-- akhir section FOOTER -->
+                    <!-- Kolom 2: Menu -->
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <h5 class="text-white-50 text-uppercase" style="letter-spacing:1px; font-size:.8rem;">Menu</h5>
+                        <ul class="list-unstyled mt-3 mb-0">
+                            <li class="mb-2"><a href="#home" class="footer-link">Beranda</a></li>
+                            <li class="mb-2"><a href="#about" class="footer-link">Tentang</a></li>
+                            <li class="mb-2"><a href="#gallery" class="footer-link">Destinasi</a></li>
+                            <li class="mb-2"><a href="#review" class="footer-link">Kuliner</a></li>
+                            <li class="mb-2"><a href="#contact" class="footer-link">Kontak</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kolom 3: Kontak -->
+                    <div class="col-6 col-md-6 col-lg-3">
+                        <h5 class="text-white-50 text-uppercase" style="letter-spacing:1px; font-size:.8rem;">Kontak
+                        </h5>
+                        <ul class="list-unstyled mt-3 mb-0">
+                            <li class="mb-2 text-white-50">halo@latarijo.com</li>
+                            <li class="mb-2 text-white-50">+62 812-0000-0000</li>
+                            <li class="mb-2 text-white-50">Indonesia</li>
+                        </ul>
+                    </div>
+
+                    <!-- Kolom 4: QR Code -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h5 class="text-white-50 text-uppercase" style="letter-spacing:1px; font-size:.8rem;">Scan QR
+                        </h5>
+                        <div class="mt-3 d-flex align-items-center gap-3">
+                            <img src="assets/qr-latarijo.png" alt="QR Code Latar Ijo" class="footer-qr" />
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center pt-4 mt-4 border-top border-white border-opacity-10 gap-2">
+                    <small class="text-white-50">© <span id="year"></span> LATAR IJO. All rights reserved.</small>
+                    <small class="text-white-50">Tourism &amp; F&amp;B</small>
+                </div>
+            </div>
+        </footer>
+        <style>
+            /* --- FOOTER --- */
+            .footer {
+                background-color: var(--color-dark);
+                color: white;
+                padding: 80px 0 0 0;
+                overflow: hidden;
+            }
+
+            .footer-link {
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                transition: .2s;
+            }
+
+            .footer-link:hover {
+                color: rgba(255, 255, 255, 0.9);
+                text-decoration: underline;
+            }
+
+            .footer-qr {
+                width: 96px;
+                height: 96px;
+                object-fit: cover;
+                border-radius: 12px;
+                background: #fff;
+                padding: 8px;
+                box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+            }
+
+            /* Responsive Fixes */
+            @media (max-width: 768px) {
+                .hero-title {
+                    font-size: 2.5rem;
+                }
+
+                .intro-title {
+                    font-size: 2.2rem;
+                }
+
+                .btn-lunar {
+                    padding: 10px 20px;
+                    font-size: 0.9rem;
+                }
+
+                .footer-qr {
+                    width: 88px;
+                    height: 88px;
+                }
+            }
+        </style>
+        <!-- akhir section FOOTER -->
+
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
 
   </main>
 
@@ -628,18 +765,68 @@
       const btn = document.getElementById('searchBtn');
       const items = Array.from(document.querySelectorAll('.post-item'));
 
+      // Pagination (DITAMBAHKAN)
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const pageInfo = document.getElementById('pageInfo');
+
+      const perPage = 9; // tampil 6 per halaman (page 1: 6, page 2: sisanya)
+      let page = 1;
+
+      function getVisibleItems(){
+        return items.filter(el => el.style.display !== 'none');
+      }
+
+      function renderPage(){
+        const visible = getVisibleItems();
+        const total = visible.length;
+        const totalPages = Math.max(1, Math.ceil(total / perPage));
+
+        if (page > totalPages) page = totalPages;
+        if (page < 1) page = 1;
+
+        const start = (page - 1) * perPage;
+        const end = start + perPage;
+
+        visible.forEach((el, idx) => {
+          el.style.display = (idx >= start && idx < end) ? '' : 'none';
+        });
+
+        if (pageInfo) pageInfo.textContent = `Halaman ${page} / ${totalPages}`;
+        if (prevBtn) prevBtn.disabled = (page <= 1);
+        if (nextBtn) nextBtn.disabled = (page >= totalPages);
+
+        const pager = document.getElementById('pager');
+        if (pager) pager.style.display = total > perPage ? 'flex' : 'none';
+      }
+
       function runFilter(){
         const q = (input.value || '').trim().toLowerCase();
+
+        // Kembalikan semua dulu (supaya filter bener)
+        items.forEach(el => { el.style.display = ''; });
+
+        // Apply filter
         items.forEach(el => {
           const title = (el.getAttribute('data-title') || '').toLowerCase();
           const tags  = (el.getAttribute('data-tags') || '').toLowerCase();
           const match = !q || title.includes(q) || tags.includes(q);
           el.style.display = match ? '' : 'none';
         });
+
+        // Reset ke page 1 tiap search, lalu paginasi ulang
+        page = 1;
+        renderPage();
       }
 
       if (input) input.addEventListener('input', runFilter);
       if (btn) btn.addEventListener('click', runFilter);
+
+      if (prevBtn) prevBtn.addEventListener('click', () => { page--; renderPage(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { page++; renderPage(); });
+
+      // Initial render paginasi
+      renderPage();
     })();
   </script>
   <!-- akhir section JS (MAIN) -->
